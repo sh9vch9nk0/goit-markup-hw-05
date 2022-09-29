@@ -23,12 +23,6 @@ body {
   font-size: 14px;
   font-style: normal;
 }
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
 img {
   display: block;
   height: auto;
@@ -45,6 +39,28 @@ ul {
 }
 .active {
   color: var(--accent-blue);
+}
+.activity {
+  position: relative;
+}
+.activity-descr {
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  height: 70px;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+.activity-descr-text {
+  color: var(--white);
+font-family: var(--font);
+font-weight: 700;
+letter-spacing: 0.03em;
+line-height: 16px;
+margin: 0;
+padding: 27px 0px;
+text-align: center;
+text-transform: uppercase;
 }
 .black-heading {
   color: var(--black-heading);
@@ -120,11 +136,6 @@ ul {
   display: flex;
   gap: 50px;
   margin-left: auto;
-}
-.sec-features {
-  display: flex;
-  gap: 30px;
-  padding-bottom: 0;
 }
 .feature-about {
   color: var(--grey);
@@ -368,6 +379,9 @@ ul {
   padding: 10px 32px;
   text-align: center;
 }
+.product-thumb::before {
+  background-color: red;
+}
 .programming-list {
   display: flex;
   gap: 30px;
@@ -410,6 +424,11 @@ ul {
 }
 .section {
   padding: 94px 0;
+}
+.sec-features {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 0;
 }
 .sec-heading {
   font-size: 36px;
