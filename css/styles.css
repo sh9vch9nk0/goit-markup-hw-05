@@ -42,14 +42,13 @@ ul {
 }
 .active-tab {
   color: var(--accent-blue);
-  overflow: hidden;
   position: relative;
 }
 .active-tab::after {
   background-color: var(--accent-blue);
   border-radius: 2px;
   bottom: -1px;
-  content: '';
+  content: "";
   height: 4px;
   left: 0;
   position: absolute;
@@ -68,14 +67,14 @@ ul {
 }
 .activity-descr-text {
   color: var(--white);
-font-family: var(--font);
-font-weight: 700;
-letter-spacing: 0.03em;
-line-height: 16px;
-margin: 0;
-padding: 27px 0px;
-text-align: center;
-text-transform: uppercase;
+  font-family: var(--font);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+  margin: 0;
+  padding: 27px 0px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .backdrop {
   background-color: rgba(0, 0, 0, 0.2);
@@ -138,7 +137,7 @@ text-transform: uppercase;
   position: absolute;
   right: 8px;
   top: 8px;
-  width: 11px; 
+  width: 11px;
 }
 .close-btn {
   align-items: center;
@@ -250,11 +249,11 @@ text-transform: uppercase;
 .heading {
   background-color: var(--accent-background);
   background-image: linear-gradient(
-    to right,
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  ),
-  url("../images/heading.jpg");
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/heading.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -292,7 +291,8 @@ text-transform: uppercase;
   fill: currentColor;
   transition: opacity 250ms var(--timing-function);
 }
-.icon:hover, .icon:focus {
+.icon:hover,
+.icon:focus {
   color: var(--accent-blue);
 }
 .icon-container {
@@ -383,7 +383,7 @@ text-transform: uppercase;
   color: var(--white);
   background-color: var(--accent-blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-  0px 2px 2px rgba(0, 0, 0, 0.12);
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .modal {
   background-color: var(--white);
@@ -413,11 +413,11 @@ text-transform: uppercase;
 .nav-item:focus {
   color: var(--accent-blue);
 }
-.nav-item::after{
+.nav-item::after {
   background-color: var(--accent-blue);
   border-radius: 2px;
   bottom: 0;
-  content: '';
+  content: "";
   display: block;
   height: 4px;
   left: 0;
@@ -469,7 +469,7 @@ text-transform: uppercase;
   border: 1px solid var(--light-grey);
   border-top: none;
   padding: 20px 24px;
-} 
+}
 .project-img {
   height: 294px;
   width: 370px;
@@ -591,15 +591,3 @@ text-transform: uppercase;
 .white {
   color: var(--white);
 }
-
-
-
-
-
-
-
-
-
-
-
-
