@@ -17,11 +17,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--white);
   color: var(--black-heading);
   font-family: var(--font);
   font-size: 14px;
-  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 img {
   display: block;
@@ -29,13 +30,9 @@ img {
   max-width: 100%;
 }
 ul {
+  list-style: none;
   margin: 0;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   padding: 0;
-  padding-inline-start: 40px;
 }
 .active {
   color: var(--accent-blue);
@@ -86,7 +83,12 @@ ul {
   transition: opacity 250ms var(--cubic);
   width: 100%;
 }
-.backdrop.is-hidden .modal {
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden.modal {
   opacity: 0;
   transform: translate(-50%, -50%);
 }
@@ -129,14 +131,9 @@ ul {
 .client-link:focus {
   border-color: var(--accent-blue);
   color: var(--accent-blue);
-  cursor: pointer;
 }
 .close {
-  cursor: pointer;
   height: 11px;
-  position: absolute;
-  right: 8px;
-  top: 8px;
   width: 11px;
 }
 .close-btn {
@@ -144,9 +141,11 @@ ul {
   background-color: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   height: 30px;
   justify-content: center;
+  padding: 0;
   position: absolute;
   right: 8px;
   top: 8px;
@@ -286,10 +285,7 @@ ul {
   width: 1px;
 }
 .icon {
-  color: var(--grey);
-  display: block;
   fill: currentColor;
-  transition: opacity 250ms var(--timing-function);
 }
 .icon:hover,
 .icon:focus {
@@ -312,10 +308,6 @@ ul {
   height: 16px;
   width: 10px;
 }
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
 .index-header {
   border-bottom: 1px solid #ececec;
 }
@@ -328,7 +320,7 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
-  transition: opacity 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .link:hover,
 .link:focus {
@@ -365,7 +357,6 @@ ul {
   margin-bottom: 50px;
 }
 .menu-btn {
-  font-family: var(--font);
   font-size: 16px;
   font-weight: 500;
   color: var(--black-heading);
@@ -376,7 +367,7 @@ ul {
   line-height: 1.62;
   letter-spacing: 0.03em;
   padding: 6px 22px;
-  transition: opacity 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 .menu-btn:hover,
 .menu-btn:focus {
@@ -396,7 +387,7 @@ ul {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 250ms var(--cubic);
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);;
   width: 528px;
 }
 .nav-item {
@@ -404,31 +395,13 @@ ul {
   letter-spacing: 0.02em;
   padding-bottom: 32px;
   padding-top: 32px;
-  position: relative;
   text-decoration: none;
   transition-property: color;
-  transition: opacity 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .nav-item:hover,
 .nav-item:focus {
   color: var(--accent-blue);
-}
-.nav-item::after {
-  background-color: var(--accent-blue);
-  border-radius: 2px;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 4px;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  transition: opacity 250ms var(--timing-function);
-  width: 100%;
-}
-.nav-item:hover::after {
-  display: block;
-  opacity: 1;
 }
 .nav-items {
   display: flex;
@@ -478,8 +451,9 @@ ul {
   line-height: 1.56;
   padding: 63px 24px;
   position: absolute;
-  top: 100%;
-  transition: box-shadow 250ms var(--timing-function);
+  top: 0;
+  transform: translateY(101%);
+  transition: transform 250ms var(--timing-function);
   width: 100%;
 }
 .project-image {
@@ -500,7 +474,7 @@ ul {
 }
 .project-link:hover .project-description,
 .project-link:focus .project-description {
-  transform: translateY(-100%);
+  transform: translateY(0);
 }
 .project-name {
   color: var(--black-heading);
@@ -562,7 +536,7 @@ ul {
   display: flex;
   height: 100%;
   justify-content: center;
-  transition: opacity 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
   width: 100%;
 }
 .social-media-link:hover,
@@ -573,7 +547,6 @@ ul {
 .social-media-link.white {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white);
-  transition: opacity 250ms var(--timing-function);
 }
 .social-media-link.white:hover,
 .social-media-link.white:focus {
